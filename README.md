@@ -15,7 +15,7 @@
    <div class="container">
     <div class="row">
         <div class="col>
-          <img width="200px" alt="Schermata 2021-03-17 alle 16 52 44" src="https://user-images.githubusercontent.com/45883138/111500641-7f684d80-8744-11eb-98dd-60992e53c221.png">
+         <img width="200" alt="Schermata 2021-03-17 alle 16 52 44" src="https://user-images.githubusercontent.com/45883138/111501113-f998d200-8744-11eb-8f66-3e14176c5912.png">
       </div>
     </div>
 </div>
