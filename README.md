@@ -1,7 +1,7 @@
 <h1>App di Delivero</h1>
   <p>stack tecnologico utilizzato:</p>
   <ul>
-    <li>Larave</li>
+    <li>Laravel</li>
     <li>Mysql</li>
     <li>Vuejs</li>
     <li>Axios</li>
