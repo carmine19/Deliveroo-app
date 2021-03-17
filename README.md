@@ -2,7 +2,7 @@
 <h1>App di Delivero</h1>
   <p>stack tecnologico utilizzato:</p>
   <ul>
-    <li>braintree</li>
+    <li>Braintree</li>
     <li>Laravel</li>
     <li>Mysql</li>
     <li>Vuejs</li>
