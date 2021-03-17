@@ -14,7 +14,7 @@
    
    <div class="container">
     <div class="row">
-        <div class="col-lg-4" style="width:50%">
+        <div class="col-lg-4" style="width: 50%;">
           <img width="1438" alt="Schermata 2021-03-17 alle 16 52 44" src="https://user-images.githubusercontent.com/45883138/111500641-7f684d80-8744-11eb-98dd-60992e53c221.png">
       </div>
     </div>
