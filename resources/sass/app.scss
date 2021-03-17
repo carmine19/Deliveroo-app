@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom
+@import 'partials/_common';
+@import 'partials/_mixin';
+@import 'partials/_sidebar';
+@import "partials/dashboard/header";
+@import "partials/login";
+@import 'partials/_cart';
+@import 'partials/_main';
+@import 'partials/_restaurant';
+@import 'partials/_homepage';
+@import 'partials/_footer';
+@import 'partials/_policy';
+@import 'partials/_errors';
+@import 'partials/dashboard/_restaurant';
+@import 'partials/_media';
+
+$fa-font-path: '../fonts/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';

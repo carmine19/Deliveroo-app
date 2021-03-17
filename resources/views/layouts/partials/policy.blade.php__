@@ -1,0 +1,14 @@
+<div id="policy">
+    {{-- Inserire qui il contenuto del banner di approvazione delle policy del sito --}}
+     <div class="policy-text">
+       <h3>Utilizziamo i cookie</h3>
+       <p>
+          Potremmo posizionarli per l'analisi dei dati dei nostri visitatori, per migliorare il nostro sito Web,
+          mostrare contenuti personalizzati e offrirti un'esperienza di navigazione eccezionale.
+          Per ulteriori informazioni sui cookie utilizziamo aprire le impostazioni.
+        </p>
+     </div>
+     <div class="policy-button">
+       <button type="button" class="btn btn-primary btn-lg">Accept Cookies</button>
+     </div>
+</div>

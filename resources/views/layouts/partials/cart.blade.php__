@@ -1,0 +1,4 @@
+<div id="cart">
+    {{-- Francesco Savignano - inserire qui il contenuto del carrello --}}
+    Cart
+</div>

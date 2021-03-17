@@ -1,0 +1,126 @@
+nav{
+  min-height: 100vh;
+  width: 88px;
+  background-color: $white;
+  border-right: 1px solid #f5f5f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  .sidebar-top{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    .close-sidebar{
+       display: none;
+       margin-left: 50px;
+       height: 88px;
+       width: 88px;
+       margin-top: 50px;
+       i{
+         color: $blue;
+         font-size: $font_size_xl;
+       }
+    }
+    .sidebar-link{
+      .hamburger-button{
+        left: 0;
+        width: 100%;
+        i{
+          position: fixed;
+          text-align: center;
+          min-width: 88px;
+          height: 88px;
+          line-height: 88px;
+          font-size: $font_size_l;
+          color: #007E8A;
+          display: block;
+        }
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        list-style-type: none;
+        margin-top: 150px;
+        li{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          a{
+            text-decoration: none;
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            //color:#00ccbc;
+            color: #007E8A;
+            text-align: center;
+            i{
+              position: relative;
+              text-align: center;
+              min-width: 88px;
+              height: 88px;
+              //line-height: 88px;
+              font-size: $font_size_l;
+              //color:#00ccbc;
+              color: #007E8A;
+              display: block;
+            }
+            p{
+              width: 100%;
+              position: relative;
+              height: 88px;
+              margin-left: 10px;
+              //line-height: 88px;
+              text-align: start;
+              //white-space: nowrap;
+              color: #007E8A;
+              font-size: $font_size_md;
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.show{
+  //display: block;
+  width: 256px;
+  //visibility: visible;
+  left: 0;
+}
+.show-p{
+display: block;
+}
+
+@media only screen and (max-width: 700px){
+  nav{
+    left: -90px;
+    .sidebar-top{
+      .sidebar-link{
+        .hamburger-button{
+          display: none;
+        }
+         ul{
+           margin-top: 100px;
+        }
+      }
+    }
+
+  }.hamburger{
+    display: block;
+  }
+}

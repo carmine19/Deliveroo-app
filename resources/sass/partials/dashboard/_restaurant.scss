@@ -1,0 +1,66 @@
+#dash-restaurant-card {
+    max-width: 550px;
+    border-radius: $radius_xxl;
+    box-shadow: $banner_shadow;
+
+    > div {
+        @include flex(row, center, center);
+    }
+
+    #dash-restaurant-card-top-left {
+        @include flex(row, center, center);
+
+        h2 {
+            font-size: $font_size_l;
+            font-weight: $font_sbold;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    #dash-restaurant-crud-controls {
+        @include flex(row, flex-end, center);
+        padding-bottom: $pd_xxl;
+        padding-right: $pd_xxl;
+
+        > div {
+            a, button {
+                background-color: #000;
+                color: $font_button_lc_color;
+                border: none;
+                padding-top: $pd_md;
+                padding-left: $pd_xl;
+                padding-right: $pd_xl;
+                padding-bottom: $pd_md;
+                margin: 0;
+                border-radius: $radius_md;
+                transition: all .3s ease;
+
+                &:hover {
+                    background-color: $bg_button_hc_color;
+                    text-decoration: none;
+                }
+            }
+
+            button {
+                height: 40px;
+            }
+        }
+    }
+
+    #dash-restaurant-card-right {
+        @include flex(column, flex-end, center);
+        padding: $pd_xxl;
+
+        a {
+            color: $font_primary_color;
+            font-size: $font_size_md;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

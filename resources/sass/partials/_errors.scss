@@ -1,0 +1,41 @@
+#errors {
+    @include flex(row, center, center);
+    height: 100vh;
+    // width: 100%;
+    position: relative;
+
+    .content-404 {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+
+        h2 {
+            font-size: 90px;
+            text-align: left;
+            font-weight: $font_bold;
+
+            .exception {
+                color: $bg_complementary_color;
+            }
+        }
+    }
+
+    a {
+        background-color: #000;
+        color: $font_button_lc_color;
+        text-decoration: none;
+        padding-left: $pd_xxl;
+        padding-right: $pd_xxl;
+        padding-top: $pd_md;
+        padding-bottom: $pd_md;
+        border-radius: $radius_xl;
+        font-size: $font_size_l;
+        font-weight: $font_sbold;
+        transition: all .3s ease;
+
+        &:hover {
+            background-color: $bg_complementary_color;
+            color: $font_button_hc_color;
+        }
+    }
+}

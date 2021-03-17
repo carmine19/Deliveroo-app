@@ -1,0 +1,1175 @@
+
+#cart_comp{
+    // MARGINE PER SIDEBAR CARRELLO
+    margin-right: 72px;
+    // background: url("../images/general/jumbo-background5.png");
+    background: darken(white,2);
+    background-repeat: no-repeat;
+    font-family: $font-family-sans-serif;
+
+    h1,h2,h3,h4{
+      font-weight: $font_bold;
+      color: $font_primary_color;
+      text-transform: capitalize;
+    }
+    h2 {
+      font-size: $font_size_sm * 1.5;
+      opacity: 0.8;
+    }
+    h3{
+      font-size: $font_size_sm * 1.2;
+      opacity: 0.7;
+    }
+    h4{
+      font-size: $font_size_sm * 1.1;
+      opacity: 0.5;
+    }
+
+    ul{
+      li{
+        font-weight: $font_bold;
+        color: $font_primary_color;
+        list-style-type: none;
+      }
+    }
+
+    i{
+      cursor: pointer;
+    }
+
+    .dish-category-title {
+        font-size: 24px;
+    }
+
+    .restaurant{
+      width: 100%;
+      // border: 2px solid black;
+      .container{
+
+        .restaurant-details-container{
+          // background: linear-gradient(to bottom, #3490dc, lightblue,darken(white,2));
+          width:100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .restaurant-details{
+            width:55%;
+            padding: 24px;
+            line-height: 1.6;
+            h1{
+              font-size: 38px;
+              opacity: 0.9;
+            }
+            ul{
+              padding-left: 3px;
+              li{
+                font-size: $font_size_sm * 1.3;
+                opacity: 0.8;
+                span{
+                  font-size: $font_size_sm * 1.2;
+                  opacity: 0.7;
+                }
+              }
+            }
+
+          }
+          .restaurant-cover{
+            width: 45%;
+            // border-bottom: 3px solid $bg_primary_color;
+            padding: 24px;
+            img{
+              box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.51);
+              border-radius: 2px;
+              //height: 300px;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        //COMPONENT TEMPLATE CONTAINER
+        .component-container{
+          // border: 1px solid black;
+          color: $black;
+          width:100%;
+          min-height: 100vh;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          margin-bottom: 32px;
+
+            .dish-categories{
+              width: 100vw;
+              // padding-top: 32px;
+              // display: flex;
+              // flex-direction: column;
+              // CARDS_CONTAINER
+              .dish-categories-container{
+                // overflow-y: scroll;
+                margin-top: 32px;
+
+              .dish-cards-container{
+                // padding-top: 32px;
+                display: flex;
+                flex-wrap: wrap;
+                // align-items: center;
+                // margin: 0 auto;
+                justify-content: flex-start;
+                // min-height: 220px;
+                // margin-bottom: 40px;
+
+                .dish-card{
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  width: 350px;
+                  margin: 0 2px;
+                  margin-top: 4px;
+                  // margin: 0 2px;
+                  // height: 180px;
+                  .card-body{
+                    background: white;
+                    width:100%;
+                    // min-height: 250px;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: row;
+                    align-items: center;
+                    min-height: 240px;
+                    .img-box{
+                      img{
+                        width: 140px;
+                        height: 140px;
+                        object-fit: cover;
+                        object-position: center;
+                      }
+                    }
+                    .info-box{
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: space-around;
+                      align-items: flex-start;
+                      width: calc(100% - 124px);
+                      padding: 10px;
+                      .btn-link{
+                        padding: 0;
+                      }
+                      .cart-adder{
+                        display:flex;
+                        align-items: center;
+                        align-self: center;
+                        padding: 5px 0;
+                        button.btn{
+                          padding:2px;
+                          border-radius: 50%;
+                          width: 15px;
+                          height: 15px;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          .fa-minus,.fa-plus{
+                            font-size: $font_size_sm * 0.8;
+                            // padding:  4px 7px;
+                          }
+                        }
+                        .fa-minus, .fa-plus{
+                          // background-color: orange;
+                          // color: rgba(255,255,255,0.7);
+                          // padding: 5px;
+                          // margin: 0 5px;
+                          // border-radius: 30%;
+                          // border: 1px solid darken(orange, 5);
+                        }
+                        .dish-quantity{
+                          margin: 5px;
+                        }
+                      }
+                    }
+                  }
+                  .dish-modal{
+                    position: fixed;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(100, 100, 100, 0.1);
+                    z-index: 50;
+
+                    .dish-modal-body{
+                      position: absolute;
+                      transform: translate(-50%, -50%);
+                      top: 50%;
+                      left: 50%;
+                      height: 500px;
+                      width: 400px;
+                      background-color: white;
+                      z-index: 50;
+                      border-radius: 8px;
+                      .close-modal{
+                        position: absolute;
+                        top: -5px;;
+                        right: 0;
+                        margin: 5px;
+                        padding: 0;
+                        display: inline-block;
+                        font-size: $font_size_sm * 1.5;
+                        color: rgba(0,0,0,0.3);
+                        i{
+                          cursor: pointer;
+                        }
+                      }
+                      .dish-details{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        height: 100%;
+                        width: 100%;
+                        .img-box{
+                          img{
+                            width: 140px;
+                            height: 140px;
+                            object-fit: cover;
+                            object-position: center;
+                          }
+                        }
+                        .info-box{
+                          height: 50%;
+                          width: 50%;
+                          display: flex;
+                          flex-direction: column;
+                          align-items: center;
+                          justify-content: space-between;
+
+                          .text-container{
+                            text-align: center;
+                            width: 100%;
+                            word-wrap: break-word;
+                            h3{
+                              text-align: center;
+                              width: 100%;
+                              word-wrap: break-word;
+                              h4{
+                                width: 100%;
+                                text-align: center;
+                                word-wrap: break-word;
+                              }
+                            }
+                          }
+                          .cart-adder{
+                            align-self: center;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+                            .dish-quantity{
+                              margin: 0 5px;
+                            }
+                            .btn.btn-primary{
+                              width: 20px;
+                              height: 20px;
+                              padding: 0px;
+                              display: flex;
+                              align-items: center;
+                              justify-content:center;
+                              font-size: $font_size_sm;
+                              border-radius: 50%;
+                              .fas.fa-minus,.fas.fa-plus{
+                                display: inline-block;
+                              }
+                            }
+                          }
+
+                        }
+
+                      }
+                    }
+                  }
+                // END DISH CARD
+                }
+
+
+              }
+            }
+          }
+
+          // SIDE-BAR-CART
+          .side-bar-cart,.side-bar-cart-active{
+            box-shadow: -2px 0px 13px 0px rgba(200,200,200,0.80);
+            overflow-y: auto;
+            overflow-x: hidden;
+            transition: all 1s ease;
+            width: 88px;
+            min-height: 100vh;
+            padding: 0 32px;
+            background-color: darken(white, 3);
+            position: fixed;
+            right:0;
+            top: 0;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // border-left: 5px solid darken(whitesmoke, 6);
+            .cart-icon{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              // position: absolute;
+              // top: 50%;
+              // right: 50%;
+              // width: 100%;
+              // border: 1px solid black;
+              position: relative;
+              // transform: translateY(50%);
+              // background-color: #3490dc;
+              // height: 50px;
+              // width: 50px;
+              // border-radius: 50%;
+              z-index: 20;
+              i{
+                color: #007e8a;
+                font-size: 40px;
+                &:hover{
+                  color: darken(#007e8a, 8);
+                }
+              }
+              .quantity{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                transform: translate(50%, -50%);
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                background: rgba(255, 255, 255, 0.9);
+                span{
+                  font-size: $font_size_sm * 0.8;
+                }
+              }
+            }
+            .cart-list{
+              width: 400px;
+              top: 5px;
+              left: 88px;
+              position: absolute;
+              // padding-bottom: 250px;
+              .cart-title{
+                width: 100%;
+                text-align: center;
+                padding-top: 5px;
+                font-size: $font_size_sm * 1.5;
+                opacity: 0.8;
+                h3{
+                  font-size: $font_size_sm * 1.2;
+                  opacity: 0.7;
+                }
+              }
+              button.btn{
+                padding:6px;
+                //border-radius: 50%;
+                //width: 20px;
+                //height: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 5px;
+                .fa-trash-alt{
+                  font-size: $font_size_sm;
+                  // padding:  4px 7px;
+                }
+              }
+              li{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin-bottom: 2px;
+                .cart-card{
+                  background: white;
+                  width:100%;
+                  display: flex;
+                  justify-content: flex-start;
+                  flex-direction: row;
+                  align-items: center;
+                  .cart-card-img{
+                    img{
+                      width: 116px;
+                      height: 116px;
+                      object-fit: cover;
+                      object-position: center;
+                      border-radius: 4px;
+                    }
+                  }
+                  .cart-card-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    width: calc(100% - 124px);
+                    padding: 5px;
+                    h2{
+                      font-size: $font_size_sm * 1.5;
+                      opacity: 0.8;
+                    }
+                    h3{
+                      font-size: $font_size_sm * 1.2;
+                      opacity: 0.7;
+                    }
+                    h4{
+                      font-size: $font_size_sm * 1.1;
+                      opacity: 0.5;
+                    }
+                    .dish-quantity{
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      align-self: center;
+                      .btn-group{
+                        display: flex;
+                        align-items: center;
+                        span{
+                          padding: 0 4px;
+                          opacity: 0.5;
+                        }
+                        button.btn{
+                          padding:2px;
+                          border-radius: 50%;
+                          width: 15px;
+                          height: 15px;
+                          display: flex;
+                          justify-content: center;
+                          align-items: center;
+                          .fa-minus,.fa-plus{
+                            font-size: $font_size_sm * 0.8;
+                          }
+                        }
+                        i{
+                          margin: 0 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .side-bar-cart-active{
+            transition: all 1s ease;
+            width: 504px;
+            // border-top-left-radius: 4%;
+            // border-bottom-left-radius: 4%;
+            .cart-icon{
+              align-self:flex-start;
+              //margin-left: 5px;
+            }
+          }
+        }
+        // END COMPONENT CONTAINER
+
+      }
+
+      // RESTAURANT END
+    }
+
+//CART_COMP END
+}
+
+@media only screen and (max-width: 1227px){
+  #cart_comp{
+    position: relative;
+    h1,h2,h3,h4{
+
+    }
+
+    ul{
+      li{
+
+      }
+    }
+
+    i{
+    }
+
+    .restaurant{
+
+      .container{
+        .restaurant-details-container{
+          .restaurant-details{
+
+            h1{
+
+            }
+            ul{
+              li{
+                span{
+
+                }
+              }
+            }
+          }
+          .restaurant-cover{
+
+            img{
+
+            }
+          }
+        }
+        //COMPONENT TEMPLATE CONTAINER
+        .component-container{
+
+          // CARDS_CONTAINER
+          .dish-cards-container{
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            // align-items: flex-start;
+            // padding-top: 16px;
+            .dish-card{
+              // width: 100%;
+              // display: flex;
+              // flex-direction: row;
+              // justify-content:flex-start;
+              // // height: auto;
+              // align-items: center;
+
+              .card-body{
+                // width:100%;
+                // flex-direction: row;
+                // justify-content: space-between;
+                // align-items: center;
+                // // width: 100%;
+
+                .contentBox{
+                  // display: flex;
+                  // width: auto;
+                  .img-box{
+                    img{
+
+                    }
+                  }
+                }
+                .info-box-2{
+                  // height: 100%;
+                  // overflow-y: scroll;
+                  // margin-top: 5px;
+                  // border: 1px solid darken(white, 15);
+                  // border-radius: 10px;
+                  // background-color: rgba(white, 0.5);
+                  // width: auto;
+                  // padding: 2px;
+                }
+                .cart-adder{
+
+                }
+              }
+            }
+
+
+          }
+
+          // SIDE-BAR-CART
+          .side-bar-cart,.side-bar-cart-active{
+
+            .cart-icon{
+
+              i{
+
+              }
+              .quantity{
+
+                span{
+
+                }
+              }
+            }
+            .cart-list{
+
+              li{
+
+                .cart-card{
+
+                  .cart-card-img{
+
+                    img{
+
+                    }
+                  }
+                  .cart-card-info{
+
+                    .dish-quantity{
+
+                      .btn-group{
+                        i{
+
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .side-bar-cart-active{
+
+            .cart-icon{
+
+            }
+          }
+        }
+      }
+
+      // RESTAURANT END
+    }
+
+//CART_COMP END
+}
+}
+
+@media only screen and (max-width: 1024px){
+  #cart_comp{
+
+    h1,h2,h3,h4{
+
+    }
+
+    ul{
+      li{
+
+      }
+    }
+
+    i{
+    }
+
+    .restaurant{
+      .container{
+        .restaurant-details-container{
+          // position: relative;
+          // width: 100%;
+          .restaurant-details{
+            // padding: 24px;
+            // z-index: 1;
+            // width: 100%;
+            h1{
+
+            }
+            ul{
+              li{
+                span{
+
+                }
+              }
+            }
+          }
+          .restaurant-cover{
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+            // z-index: 0;
+            img{
+              // height: 200px;
+              // width: 100%;
+              // opacity: 0.6;
+            }
+          }
+        }
+          //COMPONENT TEMPLATE CONTAINER
+          .component-container{
+
+            // CARDS_CONTAINER
+            .dish-cards-container{
+              // display: block;
+              .dish-card{
+                // display: block;
+                // margin-bottom: 2px;
+                // width: 100%;
+                // height: 300px;
+                .card-body{
+                  // flex-direction: column;
+
+                  // width: 100%;
+                  // padding: 0;
+                  // margin: 0;
+                  .contentBox{
+                    // display: flex;
+                    // min-width: 100%;
+                    .img-box{
+                      img{
+
+                      }
+                    }
+                  }
+                  .cart-adder{
+
+                  }
+                }
+              }
+
+
+            }
+
+            // SIDE-BAR-CART
+            .side-bar-cart,.side-bar-cart-active{
+
+              .cart-icon{
+
+                i{
+
+                }
+                .quantity{
+
+                  span{
+
+                  }
+                }
+              }
+              .cart-list{
+
+                li{
+
+                  .cart-card{
+
+                    .cart-card-img{
+
+                      img{
+
+                      }
+                    }
+                    .cart-card-info{
+
+                      .dish-quantity{
+
+                        .btn-group{
+                          i{
+
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .side-bar-cart-active{
+
+              .cart-icon{
+
+              }
+            }
+          }
+        }
+      }
+
+      // RESTAURANT END
+    }
+
+//CART_COMP END
+}
+
+@media only screen and (max-width: 992px){
+  #cart_comp{
+
+    h1,h2,h3,h4{
+
+    }
+
+    ul{
+      li{
+
+      }
+    }
+
+    i{
+    }
+
+    .restaurant{
+      .container{
+        .restaurant-details-container{
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: center;
+          .restaurant-details{
+            // padding: 24px;
+            // z-index: 1;
+            // width: 100%;
+            h1{
+
+            }
+            ul{
+              li{
+                span{
+
+                }
+              }
+            }
+          }
+          .restaurant-cover{
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            width: 100%;
+            // z-index: 0;
+            img{
+              // height: 200px;
+              width: 80%;
+              // opacity: 0.6;
+            }
+          }
+        }
+          //COMPONENT TEMPLATE CONTAINER
+          .component-container{
+
+            .dish-categories{
+              // CARDS_CONTAINER
+              .dish-category-title{
+                width: 100%;
+                text-align: center;
+              }
+              .dish-cards-container{
+                display: flex;
+                justify-content: center;
+                .dish-card{
+                  // display: block;
+                  // margin-bottom: 2px;
+                  // width: 100%;
+                  // height: 300px;
+                  .card-body{
+                    // flex-direction: column;
+
+                    // width: 100%;
+                    // padding: 0;
+                    // margin: 0;
+                    .contentBox{
+                      // display: flex;
+                      // min-width: 100%;
+                      .img-box{
+                        img{
+
+                        }
+                      }
+                    }
+                    .cart-adder{
+
+                    }
+                  }
+                }
+
+
+              }
+            }
+
+            // SIDE-BAR-CART
+            .side-bar-cart,.side-bar-cart-active{
+
+              .cart-icon{
+
+                i{
+
+                }
+                .quantity{
+
+                  span{
+
+                  }
+                }
+              }
+              .cart-list{
+
+                li{
+
+                  .cart-card{
+
+                    .cart-card-img{
+
+                      img{
+
+                      }
+                    }
+                    .cart-card-info{
+
+                      .dish-quantity{
+
+                        .btn-group{
+                          i{
+
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .side-bar-cart-active{
+
+              .cart-icon{
+
+              }
+            }
+          }
+        }
+      }
+
+      // RESTAURANT END
+    }
+
+//CART_COMP END
+}
+
+@media only screen and (max-width: 700px){
+  nav{
+    //display: none;
+  }
+  main{
+    margin-left:0;
+    overflow: auto;
+    width: 100%;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  #cart_comp{
+    margin-right: 0;
+    h1,h2,h3,h4{
+
+    }
+
+    ul{
+      li{
+
+      }
+    }
+
+    i{
+    }
+
+    .restaurant{
+      .container, .container-sm{
+        max-width: 100% !important;
+        padding: 0;
+        margin: 0;
+        .restaurant-details-container{
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: center;
+          .restaurant-details{
+            width: 100vw;
+            text-align: center;
+            h1{
+              text-align: center;
+              // font-size: $font_size_sm * 1.5;
+            }
+            ul{
+              text-align: center;
+              li{
+                text-align: center;
+                span{
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .restaurant-cover{
+            width: 100%;
+            margin-top: 88px;
+            //img{
+
+            //}
+          }
+        }
+        //COMPONENT TEMPLATE CONTAINER
+        .component-container{
+          width: 100vw;
+          // margin: 0;
+          // CARDS_CONTAINER
+          .dish-cards-container{
+            // display: block;
+            .dish-card{
+              // height: auto;
+              // margin-bottom: 5px;
+              // margin-left: 0;
+              // display: inline-block;
+              // max-width: 100%;
+              // min-height: 410px;
+              // display: flex;
+              // align-items: center;
+              .card-body{
+                // width: 100%;
+                // min-height: 50vh;
+                // display: flex;
+                // align-items: center;
+                // flex-direction: column;
+                // width: 100%;
+                // padding: 0;
+                // margin: 0;
+                .contentBox{
+                  // width: 100%;
+                  // display: flex;
+                  // flex-direction: column;
+                  // justify-content: center;
+                  // align-items: center;
+                  // border: none;
+                  .img-box{
+                    img{
+                      // border-top-left-radius: 0;
+                      // border-bottom-left-radius: 0;
+
+                    }
+                  }
+                  .info-box{
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: center;
+                    // // padding: 10px 0;
+                  }
+                }
+                .cart-adder{
+
+                }
+              }
+            }
+            .space-for-icon-mobile{
+              width: 100vw;
+              height: 65px;
+              // background-color: red;
+            }
+
+
+          }
+
+          // SIDE-BAR-CART
+          .side-bar-cart,.side-bar-cart-active{
+            width: 100vw;
+            border: none;
+            border-radius: 0;
+            position: fixed;
+            top: 100vh;
+
+            left: 0;
+            .cart-icon{
+              position: fixed;
+              bottom: 10px;
+              right: 56px;
+              width: 100%;
+              // border: 1px solid black;
+
+              transform: translateX(50%);
+              // background-color: $bg_complementary_color;
+              height: 50px;
+              width: 50px;
+              // border-radius: 50%;
+              i{
+
+              }
+              .quantity{
+
+                span{
+
+                }
+              }
+            }
+            .cart{
+              position: absolute;
+              left: 0;
+              top: 0;
+              .cart-list{
+                // border: 1px solid black;
+                border: none;
+                width: 100vw;
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                li{
+                  border: none;
+                  .cart-card{
+                    display: flex;
+                    flex-direction: column;
+
+                    .cart-card-img{
+
+                      img{
+
+                      }
+                    }
+                    .cart-card-info{
+                      align-items: center;
+                      .dish-quantity{
+                        // display: flex;
+                        // align-items: flex-start;
+                        // flex-direction: column;
+                        .btn-group{
+
+                          i{
+
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                .space-for-icon-mobile-cart{
+                  width: 100vw;
+                  height: 65px;
+                }
+              }
+            }
+          }
+          .side-bar-cart-active{
+            // transition: width 0s;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            border: none;
+            .cart-icon{
+
+            }
+          }
+        }
+      }
+
+      // RESTAURANT END
+    }
+
+//CART_COMP END
+}
+}
+
+@media only screen and (max-width: 400px){
+ #cart_comp{
+   .restaurant{
+     .container{
+       //COMPONENT TEMPLATE CONTAINER
+       .component-container{
+
+
+         .dish-categories{
+
+           .dish-cards-container{
+
+             .dish-card{
+
+
+               .dish-modal{
+
+
+                 .dish-modal-body{
+                   border-radius: 0px;
+                   width: 100%;
+                  }
+                }
+                // END DISH CARD
+              }
+
+
+            }
+          }
+        }
+     }
+   }
+  }
+}

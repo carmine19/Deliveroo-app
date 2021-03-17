@@ -1,0 +1,19 @@
+@media screen and (max-width: 576px) {
+    #appTwo {
+
+        .info-section {
+            .title {
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 768px) {
+    .slide-round {
+        width: 50%; 
+        height: 50%;
+    }
+}

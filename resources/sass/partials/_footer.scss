@@ -1,0 +1,38 @@
+.footer-section {
+    background-color: white;
+    color: #007e8a;
+
+    footer {
+        padding: 16px 0;
+
+        p,small {
+            color: darkslategray;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+
+        ul {
+            list-style: none;
+
+            a {
+                color: darkslategray;
+            }
+        }
+
+        .social {
+            font-size: 40px;
+
+            i {
+                margin-right: 16px;
+            }
+        }
+    }
+
+}
