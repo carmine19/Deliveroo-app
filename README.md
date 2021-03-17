@@ -1,5 +1,5 @@
 
-<h1>App di Delivero</h1>
+<h1>App di Deliveroo</h1>
   <p>stack tecnologico utilizzato:</p>
   <ul>
     <li>Braintree</li>
