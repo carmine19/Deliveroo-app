@@ -12,6 +12,6 @@
   </ul>
    
    
-  <img width="1438" alt="Schermata 2021-03-17 alle 16 52 44" src="https://user-images.githubusercontent.com/45883138/111501449-4b415c80-8745-11eb-8126-10fb73d29d6e.png">
+  <img width="143" alt="Schermata 2021-03-17 alle 16 52 44" src="https://user-images.githubusercontent.com/45883138/111501449-4b415c80-8745-11eb-8126-10fb73d29d6e.png">
 
 
